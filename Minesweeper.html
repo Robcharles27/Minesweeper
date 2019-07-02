@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <title>A3 Minesweeper</title>
+      <link rel="stylesheet" href="minesweeper.css">
+      <meta charset="utf-8">
+   </head>
+   <body>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type="text/javascript" src="minesweeper.js"></script>
+      <h1>A3 Minesweeper</h1>
+      <div class = "gameInstructions">
+         <h2> Instructions </h2>
+         <p id = "instructions"> 
+            If you left click a button with a mine, you lose and the game is over. If you left click a button that is adjacent (including diagonally) to at least one mine, 
+            the button is replaced with a label that indicates the number of adjacent buttons that have mines.If the square is not adjacent to any mines, the button is replaced 
+            by a blank label and all of the adjacent buttons that have not already been clicked are automatically pressed since it is safe to do so. A player may mark a button as 
+            being a mine by shift left clicking on the button. The button's appearance should visually change to indicate that it has been so marked. A subsequent shift left click 
+            clears the mark (i.e., like a toggle). A marked button should not do anything if left-clicked, thus preventing an accidental clicking of a space known to contain a mine.
+            The game ends when a player clears (i.e., left-clicks) all of the spaces that do not contain mines and marks all of the spaces with mines.
+         </p>
+         <h3> On larger boards, first click may have a slight buffer before displaying flipped tiles </h3>
+      </div>
+      <!-- Provide a way to restart the game with a new randomly drawn minefield at anytime. -->
+      <div class = "gameButton">
+         <button type="submit" onclick="buildGame()">New Game/Reset</button>
+      </div>
+      <div class= "gameSetting">
+         <h2> Adjust The Settings! </h2>
+         <div class = "width">
+            Adjust Width: <input type="text" name="width" placeholder="Select a number from 8-40">
+         </div>
+         <div class = "height">
+            Ajust Height: <input type="text" name="height" placeholder="Select a number from 8-30">
+         </div>
+         <div class = "mines">
+            Adjust Mines: <input type="text" name="mines" placeholder="Must be at least 1">
+         </div>
+      </div>
+      <div class="records">
+      <h2> Records </h2>
+      Time Elapsed in Seconds: <b id="timer">0</b>
+      <br />
+      <!-- Provide an indication of the number of bombs not yet thought to be found (i.e., the number of bombs minus the number of spaces marked as bombs). -->
+      Mines Remaining: <b id="remaining"></b>
+      <br />
+      <h2> High Score </h2>
+      Top Score: <b id="topScore"></b><br>
+      <div class = "scoreButton">
+         <button type="submit" onclick="pastScore()">View Past Scores</button>
+      </div>
+      <div class="gameboard">
+         <div class="minesweeperPacker">
+            <div class="minesweeperHost">
+            </div>
+         </div>
+      </div>
+	  </div>
+   </body>
+   </html>

@@ -1,0 +1,64 @@
+body { 
+	background-color: #5c85d6;
+	background: radial-gradient(#ffffff, #5c85d6);
+	font-family: 'Lucida Sans Unicode';
+	font-size:12px;
+}
+h1{
+	text-align: center;
+	font-family: 'Lucida Sans Unicode';
+	font-size: 26px;
+}
+h2{
+	font-family: 'Lucida Sans Unicode';
+	font-size: 18px;
+}
+h3{
+	font-family: 'Lucida Sans Unicode';
+	font-size: 14px;
+}
+.gameInstructions{
+	text-align: center;
+	font-family: 'Lucida Sans Unicode';
+}
+
+.minesweeperPacker {
+	display: inline-block;
+}
+
+.minesweeperHost {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 50px;
+}
+button{
+	border-radius: 20px;
+	width: 20%;
+	padding: 10px;
+	font-size: 12px;
+	background-color: #00cccc;
+	font-family: 'Lucida Sans Unicode';
+}
+button:hover{
+	cursor: pointer;
+	color: purple;
+}
+.gameButton{
+	text-align:center;
+}
+.scoreButton{
+	width: 20%;
+	border-radius: 10px;
+}
+.gameboard{
+	text-align: center;
+}
+.boardTiles {
+	border: 1px solid black;
+	width: 22px;
+	height: 22px;
+	line-height: 22px;
+	background-color: blue;
+	text-align: center;
+}
+
